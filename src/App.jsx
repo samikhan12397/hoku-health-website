@@ -1,7 +1,8 @@
-import DoctorManagement from "./components/dashboard/admin/DoctorManagement";
+import AdminDashboardPage from "./pages/AdminDashboard";
 
 function App() {
-  return <DoctorManagement />;
+  return <AdminDashboardPage />;
 }
 
 export default App;
+
