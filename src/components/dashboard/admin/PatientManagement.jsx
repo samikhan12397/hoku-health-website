@@ -13,10 +13,6 @@ import {
   Calendar,
 } from "lucide-react";
 
-// Hoku Health Care — Admin Panel: Patient Management
-// Brand tokens: Health Green #2E7D32 · Trust Blue #1565C0 · Soft Gray #F5F5F5
-// Headings: Poppins · Body: Inter
-
 const initialPatients = [
   {
     id: 1,
@@ -175,7 +171,6 @@ export default function PatientManagement() {
   return (
     <div className="min-h-screen bg-[#F5F5F5] font-['Inter']">
       <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="mb-6">
           <p className="text-xs font-semibold uppercase tracking-widest text-[#2E7D32]">
             Hoku Health Care
@@ -188,7 +183,6 @@ export default function PatientManagement() {
           </p>
         </div>
 
-        {/* Summary strip */}
         <div className="mb-5 grid grid-cols-1 gap-4 sm:grid-cols-3">
           <div className="rounded-2xl bg-white p-4 shadow-[0_4px_12px_rgba(0,0,0,0.08)]">
             <p className="text-xs text-[#6B7280]">Total Patients</p>
@@ -208,7 +202,6 @@ export default function PatientManagement() {
           </div>
         </div>
 
-        {/* Filters */}
         <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center">
           <div className="relative flex-1">
             <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#6B7280]" />
@@ -233,7 +226,6 @@ export default function PatientManagement() {
           </div>
         </div>
 
-        {/* Table / Empty state */}
         <div className="rounded-2xl bg-white p-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] sm:p-6">
           {filtered.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-16 text-center">
@@ -325,7 +317,6 @@ export default function PatientManagement() {
 
       <PatientDetailsPanel patient={viewing} onClose={() => setViewing(null)} />
 
-      {/* Block/Unblock confirmation */}
       {blockTarget && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4">
           <div className="w-full max-w-sm rounded-2xl bg-white p-6 text-center shadow-xl">

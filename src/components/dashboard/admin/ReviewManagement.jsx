@@ -11,11 +11,6 @@ import {
   Frown,
 } from "lucide-react";
 
-// Hoku Health Care — Admin Panel: Review Management
-// Brand tokens: Health Green #2E7D32 · Trust Blue #1565C0 · Soft Gray #F5F5F5
-// Headings: Poppins · Body: Inter
-// Includes AI Sentiment Analysis output (Hira Abdullah's module) alongside each review
-
 const initialReviews = [
   {
     id: 1,
@@ -121,7 +116,6 @@ export default function ReviewManagement() {
   return (
     <div className="min-h-screen bg-[#F5F5F5] font-['Inter']">
       <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="mb-6">
           <p className="text-xs font-semibold uppercase tracking-widest text-[#2E7D32]">
             Hoku Health Care
@@ -134,7 +128,6 @@ export default function ReviewManagement() {
           </p>
         </div>
 
-        {/* Summary strip */}
         <div className="mb-5 grid grid-cols-1 gap-4 sm:grid-cols-3">
           <div className="rounded-2xl bg-white p-4 shadow-[0_4px_12px_rgba(0,0,0,0.08)]">
             <p className="text-xs text-[#6B7280]">Total Reviews</p>
@@ -153,7 +146,6 @@ export default function ReviewManagement() {
           </div>
         </div>
 
-        {/* Filters */}
         <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center">
           <div className="relative flex-1">
             <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#6B7280]" />
@@ -181,7 +173,6 @@ export default function ReviewManagement() {
           </div>
         </div>
 
-        {/* Review list */}
         {filtered.length === 0 ? (
           <div className="flex flex-col items-center justify-center rounded-2xl bg-white py-16 text-center shadow-[0_4px_12px_rgba(0,0,0,0.08)]">
             <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#F5F5F5]">
@@ -265,7 +256,6 @@ export default function ReviewManagement() {
         )}
       </div>
 
-      {/* Delete confirmation */}
       {deleteTarget && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4">
           <div className="w-full max-w-sm rounded-2xl bg-white p-6 text-center shadow-xl">

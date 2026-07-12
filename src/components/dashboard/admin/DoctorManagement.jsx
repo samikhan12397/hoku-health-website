@@ -9,12 +9,6 @@ import {
   X,
 } from "lucide-react";
 
-// Hoku Health Care — Admin Panel: Doctor Management
-// Brand tokens: Health Green #2E7D32 · Trust Blue #1565C0 · Soft Gray #F5F5F5
-// Headings: Poppins · Body: Inter
-// Serves patients across Pakistan, UAE, and UK — fees are stored in PKR
-// and displayed in the admin's chosen currency.
-
 const CURRENCIES = {
   PKR: { symbol: "PKR", rate: 1, label: "Pakistan (PKR)" },
   AED: { symbol: "AED", rate: 0.013, label: "UAE (AED)" },
@@ -189,7 +183,6 @@ export default function DoctorManagement() {
   return (
     <div className="min-h-screen bg-[#F5F5F5] font-['Inter']">
       <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-[#2E7D32]">
@@ -211,7 +204,6 @@ export default function DoctorManagement() {
           </button>
         </div>
 
-        {/* Filters */}
         <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center">
           <div className="relative flex-1">
             <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#6B7280]" />
@@ -249,7 +241,6 @@ export default function DoctorManagement() {
           </div>
         </div>
 
-        {/* Table / Empty state */}
         <div className="rounded-2xl bg-white p-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] sm:p-6">
           {filtered.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-16 text-center">
@@ -337,7 +328,6 @@ export default function DoctorManagement() {
         onSave={(doc) => setDoctors((prev) => [doc, ...prev])}
       />
 
-      {/* Delete confirmation */}
       {deleteTarget && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4">
           <div className="w-full max-w-sm rounded-2xl bg-white p-6 text-center shadow-xl">

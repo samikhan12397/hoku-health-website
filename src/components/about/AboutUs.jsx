@@ -8,12 +8,6 @@ import {
   Quote,
 } from "lucide-react";
 
-// Hoku Health Care — Public Website: About Us
-// Brand tokens: Health Green #2E7D32 · Trust Blue #1565C0 · Soft Gray #F5F5F5
-// Headings: Poppins · Body: Inter
-// Copy grounded in the brand's own tagline "We take care of your health"
-// and mission line "Nourishing lives, one home at a time" from the design brief.
-
 const values = [
   {
     icon: HeartHandshake,
@@ -49,7 +43,6 @@ const team = [
 export default function AboutUs() {
   return (
     <div className="min-h-screen bg-white font-['Inter'] text-[#1A1A2E]">
-      {/* Hero */}
       <section className="relative overflow-hidden bg-[#F5F5F5] px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <p className="text-xs font-semibold uppercase tracking-widest text-[#2E7D32]">
@@ -66,12 +59,9 @@ export default function AboutUs() {
             between comfort and quality care.
           </p>
         </div>
-
-        {/* Decorative arc, echoing the brand's homepage motif */}
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#2E7D32]/5 to-transparent" />
       </section>
 
-      {/* Stats */}
       <section className="border-b border-gray-100 px-4 py-10 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-5xl grid-cols-2 gap-6 sm:grid-cols-4">
           {stats.map((s) => (
@@ -85,7 +75,6 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Story */}
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-2 lg:items-center">
           <div>
@@ -135,7 +124,6 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Values */}
       <section className="bg-[#F5F5F5] px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl">
           <div className="mb-10 text-center">
@@ -167,7 +155,6 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Featured specialists */}
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl">
           <div className="mb-10 text-center">
@@ -198,7 +185,6 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Closing quote / CTA */}
       <section className="bg-[#1565C0] px-4 py-14 text-white sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <Quote className="mx-auto h-8 w-8 text-white/60" />

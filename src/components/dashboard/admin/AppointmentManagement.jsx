@@ -8,10 +8,6 @@ import {
   Eye,
 } from "lucide-react";
 
-// Hoku Health Care — Admin Panel: Appointment Management
-// Brand tokens: Health Green #2E7D32 · Trust Blue #1565C0 · Soft Gray #F5F5F5
-// Headings: Poppins · Body: Inter
-
 const initialAppointments = [
   {
     id: 101,
@@ -157,7 +153,6 @@ export default function AppointmentManagement() {
   return (
     <div className="min-h-screen bg-[#F5F5F5] font-['Inter']">
       <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="mb-6">
           <p className="text-xs font-semibold uppercase tracking-widest text-[#2E7D32]">
             Hoku Health Care
@@ -170,7 +165,6 @@ export default function AppointmentManagement() {
           </p>
         </div>
 
-        {/* Status summary */}
         <div className="mb-5 grid grid-cols-2 gap-4 sm:grid-cols-4">
           {Object.entries(counts).map(([status, count]) => (
             <div key={status} className="rounded-2xl bg-white p-4 shadow-[0_4px_12px_rgba(0,0,0,0.08)]">
@@ -180,7 +174,6 @@ export default function AppointmentManagement() {
           ))}
         </div>
 
-        {/* Filters */}
         <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center">
           <div className="relative flex-1">
             <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#6B7280]" />
@@ -205,7 +198,6 @@ export default function AppointmentManagement() {
           </div>
         </div>
 
-        {/* Table / Empty state */}
         <div className="rounded-2xl bg-white p-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] sm:p-6">
           {filtered.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-16 text-center">

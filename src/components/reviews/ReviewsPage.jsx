@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 
-// Hoku Health Care — Public Website: Reviews Page
-// Brand tokens: Health Green #2E7D32 · Trust Blue #1565C0 · Soft Gray #F5F5F5
-// Headings: Poppins · Body: Inter
-// Only approved reviews are shown publicly (is_approved = true, per Admin Review Management)
-
 const approvedReviews = [
   {
     id: 1,
@@ -117,7 +112,6 @@ function AddReview() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (rating === 0 || !comment.trim()) return;
-    // POST /api/reviews — goes to Admin Review Management for approval before showing publicly
     setSubmitted(true);
   };
 

@@ -10,49 +10,19 @@ import {
   MoreVertical,
 } from "lucide-react";
 
-// Hoku Health Care — Admin Dashboard (overview)
-// Brand tokens (from project SRS, Section 7):
-// Health Green #2E7D32 · Trust Blue #1565C0 · Soft Gray #F5F5F5
-// Dark Text #1A1A2E · Light Text #6B7280
-// Headings: Poppins · Body: Inter
-
 const stats = [
-  {
-    label: "Total Patients",
-    value: "1,248",
-    delta: "+8.2%",
-    icon: Users,
-    accent: "bg-[#1565C0]",
-  },
-  {
-    label: "Active Doctors",
-    value: "36",
-    delta: "+2 this month",
-    icon: Stethoscope,
-    accent: "bg-[#2E7D32]",
-  },
-  {
-    label: "Appointments Today",
-    value: "57",
-    delta: "12 pending",
-    icon: CalendarCheck,
-    accent: "bg-[#1565C0]",
-  },
-  {
-    label: "Avg. Rating",
-    value: "4.8",
-    delta: "214 reviews",
-    icon: Star,
-    accent: "bg-[#2E7D32]",
-  },
+  { label: "Total Patients", value: "1,248", delta: "+8.2%", icon: Users, accent: "bg-[#1565C0]" },
+  { label: "Active Doctors", value: "36", delta: "+2 this month", icon: Stethoscope, accent: "bg-[#2E7D32]" },
+  { label: "Appointments Today", value: "57", delta: "12 pending", icon: CalendarCheck, accent: "bg-[#1565C0]" },
+  { label: "Avg. Rating", value: "4.8", delta: "214 reviews", icon: Star, accent: "bg-[#2E7D32]" },
 ];
 
 const recentAppointments = [
-  { patient: "Ahsan Raza", doctor: "Dr. Ali Khan", service: "Home Health", time: "09:30 AM", status: "Confirmed" },
-  { patient: "Mehnaz Bibi", doctor: "Dr. Sara Iqbal", service: "Palliative Care", time: "10:15 AM", status: "Pending" },
-  { patient: "Bilal Chaudhry", doctor: "Dr. Ali Khan", service: "Hospice Care", time: "11:00 AM", status: "Confirmed" },
-  { patient: "Iqra Fatima", doctor: "Dr. Zainab Haider", service: "Home Health", time: "01:20 PM", status: "Cancelled" },
-  { patient: "Usman Tariq", doctor: "Dr. Ali Khan", service: "Home Health", time: "02:45 PM", status: "Confirmed" },
+  { patient: "Charlotte Bennett", doctor: "Dr. James Whitfield", service: "Home Health", time: "09:30 AM", status: "Confirmed" },
+  { patient: "Fatima Al Suwaidi", doctor: "Dr. Emma Clarke", service: "Palliative Care", time: "10:15 AM", status: "Pending" },
+  { patient: "Daniel Weber", doctor: "Dr. Michael Braun", service: "Hospice Care", time: "11:00 AM", status: "Confirmed" },
+  { patient: "Ayesha Raheem", doctor: "Dr. Sophie Bennett", service: "Home Health", time: "01:20 PM", status: "Cancelled" },
+  { patient: "Oliver Scott", doctor: "Dr. James Whitfield", service: "Home Health", time: "02:45 PM", status: "Confirmed" },
 ];
 
 const statusStyles = {
@@ -61,11 +31,10 @@ const statusStyles = {
   Cancelled: "bg-red-50 text-[#DC2626] ring-1 ring-red-200",
 };
 
-export default function AdminDashboard() {
+export default function Dashboard() {
   return (
     <div className="min-h-screen bg-[#F5F5F5] font-['Inter']">
       <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="mb-8 flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-[#2E7D32]">
@@ -84,7 +53,6 @@ export default function AdminDashboard() {
           </div>
         </div>
 
-        {/* Stat cards */}
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map(({ label, value, delta, icon: Icon, accent }) => (
             <div
@@ -106,7 +74,6 @@ export default function AdminDashboard() {
           ))}
         </div>
 
-        {/* Recent appointments */}
         <div className="mt-8 rounded-2xl bg-white p-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] sm:p-6">
           <div className="mb-4 flex items-center justify-between">
             <div>
